@@ -1,0 +1,173 @@
+body {
+ color: #f0f6fc;
+ background: #0d1117;
+ padding: 40px 20px;
+ font-family: "Times New Roman", Times, serif;
+ animation: fadeIn 1s ease;
+}
+
+h1 {
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 20px;
+}
+
+body .grid {
+  color: #f0f6fc;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+
+  background: #161b22;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+
+  animation: slideIn 1s ease forwards;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  padding: 20px;
+  background: #161b22;
+  border-radius: 12px;
+  animation: slideIn 0.8s ease;
+  box-shadow: 0 0 15px rgba(0,255,255,0.05);
+}
+
+.status {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.status.active {
+ background: #238636;
+ transform: scale(1.05);
+}
+
+.status.inactive {
+ background: #da3633;
+ transform: scale(1.05);
+}
+
+.metrics {
+ font-weight: bold;
+ font-size: 1.1rem;
+ margin-bottom: 10px;
+}
+
+.metrics span {
+ font-weight: normal;
+}
+
+/* === Buttons === */
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.button-group button {
+  padding: 10px;
+  font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.button-group button:hover {
+ transform: scale(1.05);
+ transition: transform 0.3s ease;
+}
+
+/* Button colors */
+button.stop {
+  background: #d32f2f;
+  color: #fff;
+}
+
+button.start {
+  background: #388e3c;
+  color: #fff;
+}
+
+button.reset {
+  background: #6a1b9a;
+  color: #fff;
+}
+
+button.tasks {
+  background: #f5f5f5;
+  color: #000;
+}
+
+.chart-container {
+ position: relative;
+ height: 250px;
+ animation: fadeIn 1s ease;
+}
+
+.platform-badge {
+  background: #238636;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin: 2px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background: #161b22;
+  color: #f0f6fc;
+  font-size: 1.5rem;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);   /* slide into view */
+}
+
+/* === Responsive Buttons: 2x2 on Mobile === */
+@media (max-width: 600px) {
+  .button-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+ } to {
+    opacity: 1;
+   }
+}
+@keyframes slideIn {
+ from {
+   transform: translateY(20px);
+   opacity: 0;
+ } to {
+    transform: translateY(0);
+    opacity: 1;
+   }
+}
+

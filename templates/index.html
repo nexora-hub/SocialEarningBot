@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SocialEarningBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>SocialEarningBot</h1>
+
+<div class="grid">
+  <div class="card">
+    <div id="botStatus" class="status inactive">Loading...</div>
+    <div class="metrics">Posted Task: <span id="PostedTasks">Loading...</span></div>
+    <div class="metrics">Uptime: <span id="uptime">--:--:--</span></div>
+    <div class="metrics">Tasks Completed: <span id="tasks">Loading...</span></div>
+    <div class="metrics">Active Platforms: <span id="platforms">Loading...</span></div>
+    <div class="metrics">CPU: <span id="cpuExtra">--%</span></div>
+    <div class="metrics">RAM: <span id="ramExtra">--%</span></div>
+    <div class="button-group">
+      <button type="button" class="start" onclick="startBot()">▶ Start Bot</button>
+      <button type="button" class="stop" onclick="stopBot()">⛔ Shutdown</button>
+      <button type="button" class="reset" onclick="resetTasks()">Reset Tasks</button>
+      <button type="button" class="tasks" onclick="location.href='/view/tasks'">View Tasks</button>
+      <button type="button" class="stop" onclick="location.href='/xpra/exit'">⛔ End Session</button>
+      <button type="button" class="start" onclick="location.href='/remote/desktop'">▶ Xpra Session</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="metrics">💻 CPU & RAM Usage</div>
+  <div class="chart-container">
+    <canvas id="sysChart"></canvas>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
+

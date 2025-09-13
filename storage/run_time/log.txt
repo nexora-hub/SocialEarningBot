@@ -1,0 +1,3 @@
+[2025-09-13 23:08:32] [[93mSDE[0m]|[96m[4mSocialEarningBot → initialize[0m([95msession[0m): Session initialized successfully
+[2025-09-13 23:10:20] [93m[SDE][0m|[96masync_api → Twitter → Task-Submition[0m([95m[4m275316[0m): Hello Emmanuel! Tasks submitted successfully. Your account will be credited once the staff approved your tasks. Within 2 days
+[2025-09-13 23:11:03] [93m[SDE][0m|[96masync_api → Twitter → Task-Submition[0m([95m[4m275400[0m): Hello Emmanuel! Tasks submitted successfully. Your account will be credited once the staff approved your tasks. Within 2 days

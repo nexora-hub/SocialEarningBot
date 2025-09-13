@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #f0f6fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  animation: fadeIn 1.5s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  animation: floatIn 1s ease forwards;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.status-panel {
+  background: #161b22;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  margin-bottom: 40px;
+  animation: slideIn 1s ease forwards;
+  width: 100%;
+  max-width: 600px;
+}
+
+.status-panel h2 {
+  margin-bottom: 25px;
+}
+
+.task-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+  transform: scale(1.01);
+}
+
+.task-id {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #58a6ff;
+  margin-bottom: 10px;
+}
+
+.task-field {
+  padding-left: 30px;
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  white-space: pre-wrap;
+}
+
+.task-label {
+  min-width: 90px;
+  font-weight: bold;
+  color: #f0f6fc;
+}
+
+.task-value {
+  color: #f0f6fc;
+}
+
+.task-value.boolean {
+  color: #ffdd95;
+}
+
+.message-text {
+  text-align: center;
+  padding: 20px 20px;
+  color: #f0f6fc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes floatIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .status-panel {
+    padding: 20px;
+  }
+}
+
